@@ -1,0 +1,29 @@
+--Primeiro banco de dado
+/*
+comentario em varias linhas
+*/
+
+--DDL COMANDOS
+
+CREATE DATABASE CATALOGO;
+GO
+
+USE CATALOGO;
+GO
+
+CREATE TABLE GENERO (
+	idGenero tinyint PRIMARY KEY IDENTITY (1,1),
+	nomeGenero VARCHAR (30)
+	);
+	GO
+
+	--COMANDO PARA ANALISAR A TABELA, ALT+F1 COM A TABELA SELECIONADA
+
+CREATE TABLE FILMES(
+	idFilme SMALLINT PRIMARY KEY IDENTITY(1,1),
+	idGenero TINYINT FOREIGN KEY REFERENCES GENERO(idGenero),
+	tituloFilme VARCHAR(70)
+);
+GO
+
+

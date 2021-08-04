@@ -1,0 +1,23 @@
+tipos de dados
+TINYINT - numeros inteiros, 0 a 256
+SMALLINT - numeros inteiros, -32.768 a 32,767
+INT - numeros inteiros, 2.147.483.648 a 2.147.483.647
+BIGINT - numeros inteiros, -9.223.372.036.854.775.808 a -9.223.372.036.854.775.807
+SMALLMONEY - numeros decimais de -214,748.3648 a 214,748.3647
+MONEY - numeros decimais variando de -922,337,203,685,477.5808 a +922,337,203,685,477.5807
+
+NUMERIC(18,0) - valores numericos com casas decimais ultilizando precisão
+o primeiro numero entre os parenteses representa a quantidade de inteiros a serem armazenados,
+o segundo indica a quantidade de casas decimais do numero
+
+DECIMAL(18,0) - tem as mesmas funcionalidades de numeric,
+a diferença é que ele faz parte do padrão ANSI e NUMERIC,
+mantido por compatibilidade
+
+FLOAT - numéricos aproximado com precisão de ponto flutuante
+variando de -1.79+308 a 1.79+308
+
+REAL - - numéricos aproximado com precisão de ponto flutuante
+variando de -3.40E + 38 a 3.40E + 38
+
+BIT - só poderá conter valores lógicos 0 ou 1

@@ -1,0 +1,45 @@
+Sistema de Gerenciamento de Banco de Dados
+principais SGBDs
+mySQL - open source
+ORACLE - não é codigo aberto
+SQL Server - da microsoft
+PostfreSQL - open source
+todos acima são open source
+MongoDB - não relacional, NoSQL
+-------------------------------------------
+Scripts - DDL
+É um conjunto de instruções e comandos para definição de dados (Data
+Definition Language).
+DDL - CREATE
+os principais são 
+DDL - CREATE DATABASE - para definir novos bancos de dados.
+Obs.: o comando USE define qual banco de dados será utilizado. ex:
+
+CREATE DATABASE nome_do_banco;
+
+USE nome_do_banco;
+
+DDL - CREATE TABLE - adiciona tabela no bd, ex:
+
+CREATE TABLE nome_da_tabela (
+coluna 1 tipodedao
+coluna 2 tipodedado
+coluna 3 tipodedado
+....
+);
+
+DDL - ALTER
+pra modificar a definição de entidades existentes
+use o ALTER e para remover ou adicionar coluna a uma tabela
+use o ALTER TABLE ex:
+
+ALTER TABLE nome_da_tabela
+DROP COLUMN nome_da_coluna;
+
+ALTER TABLE nome_da_tabela
+ADD nome_da_coluna tipodedado;
+
+DDL - DROP
+DROP para remover entidades existentes
+DROP TABLE para remover uma tabela de um banco de dados
+DROP DATABASE quando quiser excluir a base de dados INTEIRA
