@@ -1,0 +1,33 @@
+JOIN - consegue trazer as informações que vc esta trabalhando e a outra que esta relacionada a primeira
+junção em álgebra relacional, e essa é a estrutura:
+
+SELECT nome_da_coluna
+FROM tabela1
+LEFT JOIN tabela2 
+ON tabela1.nome_da_coluna = tabela2.nome_da_coluna;
+-------------------------------------------------------------------
+RIGHT JOIN - a mesma coisa do left, só muda a ordem e o efeito inverte
+
+SELECT nome_da_coluna
+FROM tabela1
+RIGHT JOIN tabela2 
+ON tabela1.nome_da_coluna = tabela2.nome_da
+----------------------------------------------------
+INNER JOIN - intersecção, retorna somente os registro que existem ao msm tempo nas duas tabelas
+por exemplo, filme que possui genero e genero que possui filme
+
+SELECT nome_da_coluna
+FROM tabela1
+INNER JOIN tabela2 
+ON tabela1.nome_da_coluna = tabela2.nome_da
+---------------------------------------------------------
+FULL OUTER JOIN - ele tras todos os registros da tabela da direita,
+da tabela da esquerda ao msm tempo e também os registros
+que possuem correspondencia das duas tabelas
+
+SELECT nome_da_coluna
+FROM tabela1
+FULL OUTER JOIN tabela2 
+ON tabela1.nome_da_coluna = tabela2.nome_da
+WHERE condição;
+---------------------------------------------------------

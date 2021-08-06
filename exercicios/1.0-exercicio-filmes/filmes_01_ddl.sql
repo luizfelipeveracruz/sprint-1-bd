@@ -5,11 +5,13 @@ comentario em varias linhas
 
 --DDL COMANDOS
 
-CREATE DATABASE CATALOGO;
+CREATE DATABASE CATALOGO_luizf;
 GO
 
-USE CATALOGO;
+USE CATALOGO_luizf;
 GO
+
+
 
 CREATE TABLE GENERO (
 	idGenero tinyint PRIMARY KEY IDENTITY (1,1),
@@ -26,4 +28,77 @@ CREATE TABLE FILMES(
 );
 GO
 
+INSERT INTO GENERO (nomeGenero)
+VALUES('AÇÃO'), ('ROMANCE');
+GO
 
+INSERT INTO GENERO (nomeGenero)
+VALUES('COMÉDIA'), ('TERROR');
+GO
+
+
+INSERT INTO FILMES (idGenero,tituloFilme)
+VALUES (1,'RAMBO'), (2,'DIARIO DE UMA PAIXAO'),
+       (1,'VINGADORES'), (3,'GHOST');
+GO
+
+INSERT INTO FILMES (idGenero, tituloFilme)
+VALUES (4,'FILME NOVO');
+GO
+
+-- para atualizar uma linha
+UPDATE FILMES 
+SET tituloFilme = 'GENTE GRANDE'
+WHERE idFilme = 5; 
+GO
+
+--para ver as tabelas
+SELECT * FROM GENERO
+SELECT * FROM FILMES
+
+
+--DELETE FROM GENERO 
+--WHERE idGenero = 2;
+--GO
+
+--DELETE FROM GENERO 
+--WHERE idGenero IN(2,1);
+--GO
+
+
+--SELECIONAR TODOS OS FILMES E OS GENEROS RELACIONADOS 
+/*
+SELECT nome_da_coluna
+FROM tabela1
+LEFT JOIN tabela2 
+ON tabela1.nome_da_coluna = tabela2.nome_da_coluna;
+*/
+--OBS: tabela1.nome_da_coluna = PK da tabela1
+--     tabela2.nome_da_coluna = FK da tabela2
+
+SELECT * FROM FILMES
+LEFT JOIN GENERO
+ON FILMES.idGenero = GENERO.idGenero;
+GO
+
+--SELECIONAR SOMENTE OS FILMES QUE POSSUAM RELAÇÃO COM GENEROS
+--E TODOS OS OUTROS GENEROS 
+SELECT idFilme, tituloFilme, nomeGenero
+FROM FILMES
+RIGHT JOIN GENERO
+ON FILMES.idGenero = GENERO.idGenero;
+GO
+
+--SELECIONAR SOMENTE OS FILMES QUE POSSUAM RELAÇÃO COM GENEROS
+SELECT idFilme, tituloFilme, nomeGenero
+FROM FILMES
+INNER JOIN GENERO
+ON FILMES.idGenero = GENERO.idGenero;
+GO
+
+--SELECIONAR TODOS OS FILMES E TODOS OS GENEROS MESMO QUE NÃO HAJA CORRESPONDÊNCIA
+SELECT idFilme, tituloFilme, nomeGenero
+FROM FILMES
+FULL OUTER JOIN GENERO
+ON FILMES.idGenero = GENERO.idGenero;
+GO
