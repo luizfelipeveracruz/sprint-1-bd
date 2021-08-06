@@ -1,0 +1,7 @@
+DQL - Data Quey Language
+representa o principal comando que realiza as consultas
+
+SELECT coluna1, coluna2, ...
+FROM nome_da_tabela;
+
+SELECT * FROM nome_da_tabela (o * mostra tudo)
