@@ -1,0 +1,19 @@
+USE OPTUS;
+GO
+
+SELECT * FROM USUARIO;
+SELECT * FROM ARTISTA;
+SELECT * FROM ESTILO;
+SELECT * FROM ALBUM;
+SELECT * FROM ESTILOALBUM;
+
+SELECT nomeUsuario, emailUsuario
+FROM USUARIO
+WHERE tipoUsuario = 'admin'
+
+SELECT nomeAlbum
+FROM ALBUM
+WHERE dataLancamento > '2019-07-10'
+
+SELECT emailUsuario, senhaUsuario
+FROM USUARIO
